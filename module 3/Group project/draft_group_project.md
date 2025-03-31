@@ -32,7 +32,7 @@ BEGIN VARIABLES
 //------------------------------------------------------------------------------------------
     // Declare a list aka ARRAY of 10 employees that we will use in a loop later 
 
-    DECLARE Employees[10] AS ARRAY OF Employee
+     Employees = [10] AS ARRAY OF Employee
 //-----------------------------------------------------------------------------------------
 
     //Start a loop for user to input employee details and then use our variables from above to help calculate payroll
