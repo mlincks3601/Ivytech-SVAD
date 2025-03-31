@@ -31,9 +31,11 @@ BEGIN VARIABLES
 
 //------------------------------------------------------------------------------------------
     // Declare a list of 10 employees
+    
     DECLARE Employees[10] AS ARRAY OF Employee
 //-----------------------------------------------------------------------------------------
     //Start a loop for user to input employee details and then use our variables from above to help calculate payroll
+
     FOR i FROM 1 TO 10 DO
         DISPLAY "Enter Employee ID: "
         INPUT Employees[i].ID
@@ -47,9 +49,11 @@ BEGIN VARIABLES
         // After user has inputted the needed info, make sure to call [i] to continue to go through the loop, then calculate payroll
        //NOTES: [i] is used to reference a specific employee in the Employees array (aka a list) at index i during each iteration of the loop.
       //NOTES: Employees[i] → This accesses the i-th employee in the Employees array (aka a list) during each loop iteration.
+
         Employees[i].GrossPay = Employees[i].HourlyRate * Employees[i].HoursWorked
         Employees[i].TaxDeduction = Employees[i].GrossPay * 0.2  // Assume 20% tax
         Employees[i].NetPay = Employees[i].GrossPay - Employees[i].TaxDeduction
+
 //end the loop     
 END FOR
 //-----------------------------------------------------------------------------------------
