@@ -22,10 +22,13 @@ BEGIN VARIABLES
         DECLARE Name AS STRING
         DECLARE hourly_rate AS FLOAT
         DECLARE hours_worked AS FLOAT
+    //Below variables will be used at the end of the program
         DECLARE gross_pay AS FLOAT
         DECLARE tax _deduction AS FLOAT
         DECLARE net_pay AS FLOAT
     END VARIABLES
+
+
 //------------------------------------------------------------------------------------------
     // Declare a list of 10 employees
     DECLARE Employees[10] AS ARRAY OF Employee
@@ -50,6 +53,8 @@ BEGIN VARIABLES
 //end the loop     
 END FOR
 //-----------------------------------------------------------------------------------------
+
+
     // Display calculated payroll info to the user when finished
     DISPLAY "Payroll Summary"
     DISPLAY "-------------------------------------------"
