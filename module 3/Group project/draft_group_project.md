@@ -47,6 +47,32 @@ BEGIN VARIABLES
         PRINT "Enter Hours Worked: "
         INPUT Employees[i].hours_worked
 
+//////////////////////////////PYTHON CODE BELOW////////////////////////////////////////////
+employees = []
+
+for i in range(1, 11):  
+    print(f"\nEnter details for Employee {i}:")
+    ID = input("Enter Employee ID: ")
+    Name = input("Enter Employee Name: ")
+    hourly_rate = float(input("Enter Hourly Rate: "))
+    hours_worked = float(input("Enter Hours Worked: "))
+
+    payroll = hourly_rate * hours_worked
+
+    employees.append({
+        "ID": ID,
+        "Name": Name,
+        "Hourly Rate": hourly_rate,
+        "Hours Worked": hours_worked,
+        "Payroll": payroll
+    })
+
+print("\nPayroll Details:")
+for emp in employees:
+    print(f"ID: {emp['ID']}, Name: {emp['Name']}, Payroll: ${emp['Payroll']:.2f}")
+////////////////////////////////////////////////////////////////////////////////////////////
+
+
         // After user has inputted the needed info, make sure to call [i] to continue to go through the loop, then calculate payroll
        //NOTES: [i] is used to reference a specific employee in the Employees array (aka a list) at index i during each iteration of the loop.
       //NOTES: Employees[i] → This accesses the i-th employee in the Employees array (aka a list) during each loop iteration.
