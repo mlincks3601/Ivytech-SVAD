@@ -11,6 +11,9 @@ PLEASE READ NOTES TO UNDERSTAND THIS PROGRAM
 //Example Execution:
 //If i starts at 1, the loop executes the statements inside it, then i increases to 2, and the loop runs again. This continues until i = 10, at which point the loop stops.
 
+
+
+//--------------------------------------------------------------------------------------------
 BEGIN VARIABLES
 
     // Define variables for employee input (info we need from the user to calculate)
@@ -23,10 +26,10 @@ BEGIN VARIABLES
         DECLARE tax _deduction AS FLOAT
         DECLARE net_pay AS FLOAT
     END VARIABLES
-
+//------------------------------------------------------------------------------------------
     // Declare a list of 10 employees
     DECLARE Employees[10] AS ARRAY OF Employee
-
+//-----------------------------------------------------------------------------------------
     //Start a loop for user to input employee details and then use our variables from above to help calculate payroll
     FOR i FROM 1 TO 10 DO
         DISPLAY "Enter Employee ID: "
@@ -46,7 +49,7 @@ BEGIN VARIABLES
         Employees[i].NetPay = Employees[i].GrossPay - Employees[i].TaxDeduction
 //end the loop     
 END FOR
-
+//-----------------------------------------------------------------------------------------
     // Display calculated payroll info to the user when finished
     DISPLAY "Payroll Summary"
     DISPLAY "-------------------------------------------"
