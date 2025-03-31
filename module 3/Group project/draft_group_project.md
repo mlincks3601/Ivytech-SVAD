@@ -8,6 +8,7 @@ PLEASE READ NOTES TO UNDERSTAND THIS PROGRAM
 //FROM 1 TO 10 → This means i starts at 1 and increases by 1 each time (by default), stopping at 10.
 //DO → Indicates the beginning of the loop's code block.
 //END FOR → Marks the end of the loop.
+
 //Example Execution:
 //If i starts at 1, the loop executes the statements inside it, then i increases to 2, and the loop runs again. This continues until i = 10, at which point the loop stops.
 
