@@ -48,6 +48,7 @@ BEGIN VARIABLES
         INPUT Employees[i].hours_worked
 
 ////////////////////////PYTHON CODE BELOW TAKEN FROM PSEUDOCODE ABOVE ////////////////////
+//employees will be an array for the loop to go through
 employees = []
 
 for i in range(1, 11):  
