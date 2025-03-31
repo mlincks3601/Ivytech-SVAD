@@ -47,7 +47,7 @@ BEGIN VARIABLES
         PRINT "Enter Hours Worked: "
         INPUT Employees[i].hours_worked
 
-//////////////////////////////PYTHON CODE BELOW////////////////////////////////////////////
+////////////////////////PYTHON CODE BELOW TAKEN FROM PSEUDOCODE ABOVE ////////////////////
 employees = []
 
 for i in range(1, 11):  
