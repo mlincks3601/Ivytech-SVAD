@@ -18,41 +18,42 @@ BEGIN VARIABLES
 
     // Define variables for employee input (info we need from the user to calculate)
     // Employee variables 
-        DECLARE ID AS INTEGAR
-        DECLARE Name AS STRING
-        DECLARE hourly_rate AS FLOAT
-        DECLARE hours_worked AS FLOAT
+         ID = INTEGAR
+         Name = STRING
+         hourly_rate = FLOAT(x)
+         hours_worked = FLOAT(x)
     //Below variables will be used at the end of the program
-        DECLARE gross_pay AS FLOAT
-        DECLARE tax _deduction AS FLOAT
-        DECLARE net_pay AS FLOAT
+         gross_pay = FLOAT(x)
+         tax _deduction = FLOAT(x)
+         net_pay = FLOAT(x)
     END VARIABLES
 
 
 //------------------------------------------------------------------------------------------
-    // Declare a list of 10 employees
-    
+    // Declare a list aka ARRAY of 10 employees that we will use in a loop later 
+
     DECLARE Employees[10] AS ARRAY OF Employee
 //-----------------------------------------------------------------------------------------
+
     //Start a loop for user to input employee details and then use our variables from above to help calculate payroll
 
     FOR i FROM 1 TO 10 DO
-        DISPLAY "Enter Employee ID: "
+        PRINT "Enter Employee ID: "
         INPUT Employees[i].ID
-        DISPLAY "Enter Employee Name: "
+        PRINT "Enter Employee Name: "
         INPUT Employees[i].Name
-        DISPLAY "Enter Hourly Rate: "
-        INPUT Employees[i].HourlyRate
-        DISPLAY "Enter Hours Worked: "
-        INPUT Employees[i].HoursWorked
+        PRINT "Enter Hourly Rate: "
+        INPUT Employees[i].hourly_rate
+        PRINT "Enter Hours Worked: "
+        INPUT Employees[i].hours_worked
 
         // After user has inputted the needed info, make sure to call [i] to continue to go through the loop, then calculate payroll
        //NOTES: [i] is used to reference a specific employee in the Employees array (aka a list) at index i during each iteration of the loop.
       //NOTES: Employees[i] → This accesses the i-th employee in the Employees array (aka a list) during each loop iteration.
 
-        Employees[i].GrossPay = Employees[i].HourlyRate * Employees[i].HoursWorked
-        Employees[i].TaxDeduction = Employees[i].GrossPay * 0.2  // Assume 20% tax
-        Employees[i].NetPay = Employees[i].GrossPay - Employees[i].TaxDeduction
+        Employees[i].gross_pay = Employees[i].hourly_rate * Employees[i].hours_worked
+        Employees[i].tax_deduction = Employees[i].gross_pay * 0.2  // Assume 20% tax
+        Employees[i].net_pay = Employees[i].gross_pay - Employees[i].tax_deduction
 
 //end the loop     
 END FOR
@@ -60,16 +61,16 @@ END FOR
 
 
     // Display calculated payroll info to the user when finished
-    DISPLAY "Payroll Summary"
-    DISPLAY "-------------------------------------------"
-  //Start a loop to display the above info for every employee   
+    PRINT "Payroll Summary"
+    PRINT "-------------------------------------------"
+  //Start the last loop to display the above calculated info for every employee by calling in the loop variables from the 1st loop next to text   
  FOR i FROM 1 TO 10 DO
-        DISPLAY "Employee ID: ", Employees[i].ID
-        DISPLAY "Employee Name: ", Employees[i].Name
-        DISPLAY "Gross Pay: $", Employees[i].GrossPay
-        DISPLAY "Tax Deduction: $", Employees[i].TaxDeduction
-        DISPLAY "Net Pay: $", Employees[i].NetPay
-        DISPLAY "-------------------------------------------"
+        PRINT "Employee ID: ", Employees[i].ID
+        PRINT "Employee Name: ", Employees[i].Name
+        PRINT "Gross Pay: $", Employees[i].gross_pay
+        PRINT "Tax Deduction: $", Employees[i].tax_deduction
+        PRINT "Net Pay: $", Employees[i].net_pay
+        PRINT "-------------------------------------------"
     //end the loop 
     END FOR
 
