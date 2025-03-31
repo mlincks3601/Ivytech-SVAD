@@ -1,27 +1,27 @@
 Group project module 3 draft 
-Pseudocode taken from chatgpt then modified and added notes for further explanation
+PLEASE READ NOTES TO UNDERSTAND THIS PROGRAM 
 
-Notes for loop usage: The statement "FOR i FROM 1 TO 10 DO" is a loop in pseudocode that is used to repeat a block of code 10 times, once for each value of i from 1 to 10.
-Breakdown:
-•	FOR → This initiates a loop.
-•	i → This is a loop variable (or counter), which keeps track of the number of iterations.
-•	FROM 1 TO 10 → This means i starts at 1 and increases by 1 each time (by default), stopping at 10.
-•	DO → Indicates the beginning of the loop's code block.
-•	END FOR → Marks the end of the loop.
-Example Execution:
-If i starts at 1, the loop executes the statements inside it, then i increases to 2, and the loop runs again. This continues until i = 10, at which point the loop stops.
+// Notes for loop usage: The statement "FOR i FROM 1 TO 10 DO" is a loop in pseudocode that is used to repeat a block of code 10 times, once for each value of i from 1 to 10.
+//Breakdown:
+//FOR → This initiates a loop.
+//i → This is a loop variable (or counter), which keeps track of the number of iterations.
+//FROM 1 TO 10 → This means i starts at 1 and increases by 1 each time (by default), stopping at 10.
+//DO → Indicates the beginning of the loop's code block.
+//END FOR → Marks the end of the loop.
+//Example Execution:
+//If i starts at 1, the loop executes the statements inside it, then i increases to 2, and the loop runs again. This continues until i = 10, at which point the loop stops.
 
 BEGIN VARIABLES
 
     // Define variables for employee input (info we need from the user to calculate)
     // Employee variables 
-        ID
-        Name
-        HourlyRate
-        HoursWorked
-        GrossPay
-        TaxDeduction
-        NetPay
+        DECLARE ID AS INTEGAR
+        DECLARE Name AS STRING
+        DECLARE hourly_rate AS FLOAT
+        DECLARE hours_worked AS FLOAT
+        DECLARE gross_pay AS FLOAT
+        DECLARE tax _deduction AS FLOAT
+        DECLARE net_pay AS FLOAT
     END VARIABLES
 
     // Declare a list of 10 employees
